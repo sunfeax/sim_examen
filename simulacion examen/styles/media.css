@@ -1,0 +1,39 @@
+@media only screen and (max-width: 768px){
+    #main{
+        flex-direction: column;
+        height: auto;
+        padding-left: 5%;
+        padding-top: 5%;
+        gap: 2rem;
+    }
+
+    #menu{
+        width: 95%;
+    }
+
+    #articulos{
+        width: 95%;
+        height: auto;
+        gap: 2rem;
+    }
+
+    .articulo{
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .info-producto{
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+
+    .title-producto{
+        text-align: center;
+    }
+
+    img{
+       max-width: 100%;
+       height: auto;
+    }
+}
