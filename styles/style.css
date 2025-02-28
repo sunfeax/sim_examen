@@ -51,19 +51,38 @@
     gap: 1rem;
 }
 
-.categoria{
+.categoria {
+    position: relative;
     box-shadow: 0px 4px 15px rgb(148, 141, 141);
     border-radius: 20px;
     padding: 1rem;
     width: 200px;
-    text-align: center;
     background-color: #eadede;
+    font-size: 16px;
+    transition: ease all 0.3s;
+    border: none;
 }
 
-#categorias a{
-    color: black;
-    font-size: 16px;
-    text-decoration: none;
+.categoria::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: 20px;
+    padding: 2px;
+    background: linear-gradient(98deg, rgba(2,22,109,1) 0%, rgba(221,15,95,1) 100%);
+    -webkit-mask: linear-gradient(white 0 0) content-box, linear-gradient(white 0 0);
+    -webkit-mask-composite: exclude;
+    mask-composite: exclude;
+    opacity: 0.2; /* видимость: 0 - не видно, 1 - видно, 0.5 - прозрачный */
+    transition: opacity 0.3s ease-in-out;
+}
+
+.categoria:hover {
+    scale: 1.07;
+}
+
+.categoria:hover::before {
+    opacity: 1;
 }
 
 #articulos{
